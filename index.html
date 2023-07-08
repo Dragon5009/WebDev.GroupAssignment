@@ -10,17 +10,16 @@
     <meta name="author" content="Magical Kingdom">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Fun 'Theme Park' Adventure Family">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <!-- Body Section added by M Croft -->
 <body>
-    <div id="divFlex-Container">
+    <div id="divFlex-Container" class="align-sbs">
         <!-- Logo and Navigation added by M Croft, image by Hammand: Park logo and main navigation area -->
-        <div id="divLogoNavigation">
-            <header>
-                <object data="img/Logo.png">
+        <header>
+                <object id="logo" data="img/Logo.png">
                 </object>
-            </header>
             <nav>
                 <ol>
                     <li><a href="index.html">Home</a></li>
@@ -28,18 +27,16 @@
                     <li><a href="GettingHere.html">Getting Here</a></li>
                 </ol>
             </nav>
-        </div>
+        </header>
 
         <!-- Main Content added by M Croft: Banner area that can be changed regularly to promote events. -->
-        <div id="divBanner">
-            <img src="img/Banner.jpg" alt="Banner Image">
-        </div>
+        <img id="logo" src="img/Banner.jpg" alt="Banner Image">
 
-        <section id="divTestimonials">
+        <section id="Testimonials">
             <h2>Testimonials</h2>
-            <p>"The kids loved it, even the little ones, a family memory of a lifetime!"</p>
-            <p>"We learned so much from the events, fun and learning. Amazing."</p>
-            <p>"The value for money really is impressive, its clear they value fun more than profit."</p>
+            <p>"The kids loved it, even the little ones, a family memory of a lifetime!"<br /> - Lucy, Herefordshire</p>
+            <p>"We learned so much from the events, fun and learning. Amazing."<br /> - Dave, London</p>
+            <p>"The value for money really is impressive, its clear they value fun more than profit."<br /> - Mark, Glasgow</p>
         </section>
 
         <!-- What Happens Here Block added by M Croft: Brief overview of most significant attractions, link to what happens page -->
@@ -50,42 +47,52 @@
                 grandma too!
                 Catering is taken care of by our wide range of restaurants and cafes. You can also
                 share the memories of your trip thorugh mementoes acquired by a visit to our gift shop.</p>
-            <a href="WhatHappens.html">
-                <img src="img/RollerPrime.jpg" alt="Roller Coaster, The Roller Prime">
-            </a>
-            <p>The RollerPrime is one of the biggest rollercoasters in the world. With 32 loops and many more twists
-                and turns, its a ride that will leave you speechless!
-            </p>
             
-            <p>The event plaza holds all kinda of events, upcoming this month are the clamshell singers.
-                A wonderous experience matched by no others. They are only in the country for a limited time,
-                so don't miss out!
-            </p>
-            <a href="WhatHappens.html">
-                <img src="img/ClamshellSingers.jpg" alt="Clamshells adorn a desk">
-            </a>
+            <div id="RollerPrime" class="align-sbs">
+                <a href="WhatHappens.html">
+                    <img src="img/RollerPrime.jpg" alt="Roller Coaster, The Roller Prime">
+                </a>
+                <p>The RollerPrime is one of the biggest rollercoasters in the world. With 32 loops and many more twists
+                    and turns, its a ride that will leave you speechless!
+                </p>
+            </div>
+
+            <div id="EventPlaza" class="align-sbs">
+                <p>The event plaza holds all kinda of events, upcoming this month are the clamshell singers.
+                    A wonderous experience matched by no others. They are only in the country for a limited time,
+                    so don't miss out!
+                </p>
+                <a href="WhatHappens.html">
+                    <img src="img/ClamshellSingers.jpg" alt="Clamshells adorn a desk">
+                </a>
+            </div>
         </section>
 
         <!-- Getting Here Block added by M Croft: Brief eyecatcher for directions, link to what happens here page.-->
         <section id="GettingHere">
             <h2>Getting Here</h2>
-            <p>Magical Kingdom is located on the west side of the city of Hamble.
-                We have excellent transport links via car and the train station is a 5 minute walk.
-                The free on-site car park, is large enough to accomodate all our visitors.
-            </p>
-            <a href="GettingHere.html">
-                <img src="img/Map.jpg" alt="Map of Magical Kingdom and surrounding area.">
-            </a>
+
+            <div id="EventPlaza" class="align-ontop">
+                <p>Magical Kingdom is located on the west side of the city of Hamble.
+                    We have excellent transport links via car and the train station is a 5 minute walk.
+                    The free on-site car park, is large enough to accomodate all our visitors.
+                </p>
+                <a href="GettingHere.html">
+                    <img src="img/Map.jpg" alt="Map of Magical Kingdom and surrounding area.">
+                </a>
+            </div>
         </section>
 
         <!--  Footer added by M Croft: footer navigation and social media links-->
         <footer>
-            <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="WhatHappens.html">What Happens Here</a></li>
-                <li><a href="GettingHere.html">Getting Here</a></li>
-            </ol>
-            <div id="divSocials">
+            <nav>
+                <ol>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="WhatHappens.html">What Happens Here</a></li>
+                    <li><a href="GettingHere.html">Getting Here</a></li>
+                </ol>
+            </nav>
+            <div id="Socials">
                 <img src="img/Facebook_s.png" alt="Facebook">
                 <img src="img/Twitter_s.png" alt="Twitter">
                 <img src="img/Instagram_s.png" alt="Instagram">
