@@ -4,20 +4,24 @@
 /* Main body formatting by M Croft */
 body {
     background-color: #EDE7D9;
-    font-family: Arial, Helvetica, sans-serif;
+    /* Use Sans-serif fonts as it is more accessible to visually impaired users */
+    font-family: Arial, Helvetica, sans-serif; 
     margin: 20px;
 }
+
 
 
 /* Logo formatting by M Croft */
 header {
     width:100%;
+    min-width: 350px;
 }
 
 header #logo {
     width: 200px;
     height: 129px;
 }
+
 
 
 /* Navigation formatting by M Croft */
@@ -29,16 +33,19 @@ header nav {
     padding: 0 20px;
     margin: 10px 10px 20px 10px;
 
+    min-width: 334;
 }
 
 header nav ol {
     display: inline-block;
     list-style:none;
     margin: 0; 
+    padding: 0 20px;    
 }
 
 header nav li {
     display: inline-block;
+    margin: auto;
 }
 
 header nav li a {
@@ -47,15 +54,13 @@ header nav li a {
     color: #EDE7D9;
     background-color:#1CA3E4;
 
-    font-style: normal;
     text-decoration: none;
-    font-variant: normal;
-    font-weight: normal;
     text-align: center;
     font-size: 16px;
 
     border-radius: 5px;
     border: 1px solid black;
+
     padding: 15px 20px;
     margin: 2px 10px;
 
@@ -64,14 +69,13 @@ header nav li a {
 
 header nav li a:hover {
     background-color: #D5A021;
-    padding: 17px 20px;
-    margin: 0px 7px;
-
-    width: 156px;
+    transform: scale(1.15);
+    transition: transform 0.5s;
 }
 
 
-/* General Section formatting by M Croft */
+
+/* General Section formatting used by all sections by M Croft */
 section {
     display: flex;
     flex-flow: column wrap;
@@ -82,6 +86,11 @@ section {
     border: 1px solid black;
     border-radius: 5px;
     padding: 0 20px;
+
+    width: 500px;
+    min-width: 350px;
+    max-width: 650px;
+    flex-grow: 1;
 }
 
 section h2 {
@@ -93,7 +102,8 @@ section h2 {
 
 section div {
     display: flex;
-    
+    background-color: #0C5CA1;
+
     border-radius: 5px;
     border: 1px solid grey;
     padding: 5px;
@@ -112,24 +122,32 @@ section div img {
 section div p {
     width: 250px;
     font-size: 16px;
-    font-style: italic;
 }
 
 
-/* Flex Align Control Classes */
-.align-sbs {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 10px;
+
+
+/* General table formatting used by all tables by M Croft */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin: 10px 0;
 }
 
+th {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
 
-.align-ontop {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    gap: 10px;
+table th, td {
+    border-right: 1px solid black;
+    padding: 5px;
+}
+
+/* Colour alternate rows darker to aid readability in both tables */
+tr:nth-child(even) {
+    background-color: #093d6b;
 }
 
 
@@ -143,9 +161,10 @@ footer {
     margin: 10px 10px 20px 10px;
 
     width: 100%;
+    min-width: 350px;
 }
 footer nav {
-    display: inline-block;
+    display: block;
     float:left;
 }
 
@@ -164,10 +183,7 @@ footer nav li a {
 
     color: #EDE7D9;
 
-    font-style: normal;
     text-decoration: none;
-    font-variant: normal;
-    font-weight: normal;
     text-align: center;
 
     border-radius: 5px;
@@ -182,20 +198,62 @@ footer nav li a:hover {
     background-color: #D5A021;
 }
 
+footer div#Socials {
+    width: 160px;
+    display: inline-block;
+    float:right;
+}
+
 footer div#Socials  img {
     display: inline-block;
-    float: right;
     width: 40px;
     height: 40px;
     margin: 5px;
 }
 
+footer div#Socials img:hover {
+    background-color: #D5A021;
+}
 
-/* INDEX SPECIFIC */
+
+
+/* Control Classes by M Croft */
+.align-sbs { /* Align the content side by side rolling to the next row if needed */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.align-ontop { /* Align the content on top of each other rolling to next column if needed*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.popouthover:hover { /* Pop out the content on hover */
+    transform: scale(1.10);
+    transition: transform 0.5s;
+}
+
+.mutedecoration { /* Mute the decoration, do not denote links etc. This is handled by other indications. */
+    color:inherit;
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* ------------------ INDEX SPECIFIC by M Croft ------------------ */
 
 /* Banner formatting by M Croft */
-img#logo {
+img#banner {
     width: 100%;
+    border-radius: 5px;
+    min-width: 350px;
 }
 
 /* Testimonial formatting by M Croft */
@@ -208,6 +266,9 @@ section#Testimonials {
     margin: 0 0 20px;
 
     width: 100%;
+
+    max-width: inherit;
+    flex-grow: 0;
 }
 
 section#Testimonials p {
@@ -227,75 +288,48 @@ section#Testimonials p {
     width: 300px;
 }
 
-/* What happens here specific formatting by M Croft */
-section#WhatHappens {
-    width: 500px;
+/* Getting Here Section by M Croft */
+section#GettingHere div#IndexMap img {
+    width: 450px;
+    height: auto;
+    margin: auto;
     min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
 }
 
-/* What happens here specific formatting by M Croft */
-section#GettingHere {
-    width: 500px;
+section#GettingHere div#IndexMap p {
+    width: 100%;
     min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
 }
 
 
 
-
-/* WHAT HAPPENS HERE SPECIFIC */
-
-section#RollerPrime {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* ------------------ WHAT HAPPENS HERE SPECIFIC by M Croft ------------------ */
+/* Roller Prime Section by M Croft */
 section#RollerPrime img {
     width: 350px;
     height: auto;
     margin: auto;
 }
 
-
-section#EventSpace {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* Event Space Section by M Croft */
 section#EventSpace img {
     width: 300px;
     height: auto;
     margin: auto;
 }
+
 section#EventSpace p {
     width: 100%;
 }
 
-
-section#SplashingWater {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* Splashing Water Section by M Croft */
 section#SplashingWater img {
     width: 350px;
     height: auto;
     margin: auto;
 }
 
-
-section#PettingZoo {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* Petting Zoo Section by M Croft */
 section#PettingZoo img {
     width: 300px;
     height: auto;
@@ -308,21 +342,14 @@ section#PettingZoo p {
 
 
 
-/* GETTING HERE SPECIFIC */
+/* ------------------ ABOUT US SPECIFIC by M Croft ------------------ */
+/* Ticket Times Section by M Croft */
 section#TicketTimes {
     width: 600px;
-    min-width: 600px;
-    max-width: 650px;
-    flex-grow: 1;
+    min-width: 400px;
 }
 
-
-section#Directions {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* Directions Section by M Croft */
 section#Directions img {
     width: 100%;
     height: auto;
@@ -332,13 +359,7 @@ section#Directions p {
     width: 100%;
 }
 
-
-section#Accessibility {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* Accessibility Section by M Croft */
 section#Accessibility img {
     width: 300px;
     height: auto;
@@ -348,13 +369,7 @@ section#Accessibility p {
     width: 100%;
 }
 
-
-section#InMedia {
-    width: 500px;
-    min-width: 350px;
-    max-width: 650px;
-    flex-grow: 1;
-}
+/* In Media Section by M Croft */
 section#InMedia img {
     width: 350px;
     height: auto;
