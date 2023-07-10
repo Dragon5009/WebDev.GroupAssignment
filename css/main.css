@@ -70,7 +70,7 @@ header nav ol {
     display: inline-block;
     list-style:none;
     margin: 0; 
-    padding: 0 20px;    
+    padding: 0 20px;
 }
 
 header nav li {
@@ -117,7 +117,7 @@ header nav li a:hover {
 
 
 
-/* General Section formatting used by all sections by M Croft */
+/* General Section formatting used by all sections on site by M Croft */
 section {
     display: flex;
     flex-flow: column wrap;
@@ -171,7 +171,7 @@ section div p {
 
 
 
-/* General table formatting used by all tables by M Croft */
+/* General table formatting used by all tables on site by M Croft */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -295,7 +295,7 @@ footer div#Socials img:hover {
 
 
 
-/* ------------------ INDEX SPECIFIC by M Croft ------------------ */
+/* ------------------ INDEX PAGE SPECIFIC by M Croft ------------------ */
 
 /* Banner formatting by M Croft */
 img#banner {
@@ -352,7 +352,7 @@ section#GettingHere div#IndexMap p {
 
 
 
-/* ------------------ WHAT HAPPENS HERE SPECIFIC by M Croft ------------------ */
+/* ------------------ WHAT HAPPENS HERE PAGE SPECIFIC by M Croft ------------------ */
 /* Roller Prime Section by M Croft */
 section#RollerPrime video {
     margin: auto;
@@ -389,7 +389,7 @@ section#PettingZoo p {
 
 
 
-/* ------------------ ABOUT US SPECIFIC by M Croft ------------------ */
+/* ------------------ ABOUT US PAGE SPECIFIC by M Croft ------------------ */
 /* Ticket Times Section by M Croft */
 section#TicketTimes {
     width: 600px;
