@@ -1,11 +1,25 @@
 
 
+/* Custom Fonts by M Croft */
+@font-face { /* General font for all text */
+    font-family: 'ArchivoBlack-Regular';
+    src: url('../fonts/ArchivoBlack-Regular.otf')
+}
+
+@font-face { /* Button and command text and headers */
+    font-family: 'Archivo-BoldItalic';
+    src: url('../fonts/Archivo-BoldItalic.otf')
+}
+
+
 
 /* Main body formatting by M Croft */
 body {
     background-color: #EDE7D9;
     /* Use Sans-serif fonts as it is more accessible to visually impaired users */
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: ArchivoBlack-Regular, Arial, Helvetica, sans-serif; 
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px black;
+
     margin: 20px;
 }
 
@@ -24,9 +38,22 @@ header #logo {
 
 
 
+/* Header Default Formatting by M Croft */
+h1 {
+    font-family: Archivo-BoldItalic, Arial, Helvetica, sans-serif; 
+    text-shadow: 1px 1px 2px black, 0 0 15px purple, 0 0 5px black;
+}
+
+h2 {
+    font-family: Archivo-BoldItalic, Arial, Helvetica, sans-serif; 
+    text-shadow: 1px 1px 2px black, 0 0 15px purple, 0 0 5px black;
+}
+
+
+
 /* Navigation formatting by M Croft */
 header nav {
-    display: inline-block;
+    display: block;
     background-color: #0C5CA1;
 
     border-radius: 20px;
@@ -34,6 +61,9 @@ header nav {
     margin: 10px 10px 20px 10px;
 
     min-width: 334;
+    float: right;
+
+    box-shadow: 10px 10px rgba(128,128,255,0.1);
 }
 
 header nav ol {
@@ -52,11 +82,14 @@ header nav li a {
     display: inline-block;
 
     color: #EDE7D9;
-    background-color:#1CA3E4;
+    animation-name: navbuttons;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
 
     text-decoration: none;
     text-align: center;
     font-size: 16px;
+    font-family: Archivo-BoldItalic, Arial, Helvetica, sans-serif; 
 
     border-radius: 5px;
     border: 1px solid black;
@@ -64,11 +97,20 @@ header nav li a {
     padding: 15px 20px;
     margin: 2px 10px;
 
-    width: 150px;
+    width: 160px;
 }
+
+@keyframes navbuttons {
+    0%   {background-color: #1CA3E4;}
+    50% {background-color: #9d6ff1;}
+    100% {background-color: #1CA3E4;}
+  }
+
 
 header nav li a:hover {
     background-color: #D5A021;
+    animation-name: none;
+
     transform: scale(1.15);
     transition: transform 0.5s;
 }
@@ -91,6 +133,8 @@ section {
     min-width: 350px;
     max-width: 650px;
     flex-grow: 1;
+
+    box-shadow: 10px 10px rgba(128,128,255,0.1);
 }
 
 section h2 {
@@ -133,6 +177,8 @@ table {
     border-collapse: collapse;
     border: 1px solid black;
     margin: 10px 0;
+
+    text-shadow: 1px 1px 2px black;
 }
 
 th {
@@ -162,9 +208,10 @@ footer {
 
     width: 100%;
     min-width: 350px;
+
+    box-shadow: 10px 10px rgba(128,128,255,0.1);
 }
 footer nav {
-    display: block;
     float:left;
 }
 
@@ -185,13 +232,14 @@ footer nav li a {
 
     text-decoration: none;
     text-align: center;
+    font-family: Archivo-BoldItalic, Arial, Helvetica, sans-serif; 
 
     border-radius: 5px;
     border: 1px solid black;
     padding: 8px;
     margin: 5px 3px;
 
-    width: 150px;
+    width: 160px;
 }
 
 footer nav li a:hover {
@@ -199,9 +247,9 @@ footer nav li a:hover {
 }
 
 footer div#Socials {
-    width: 160px;
-    display: inline-block;
-    float:right;
+    width: 170px;
+    display: block;
+    float: right;
 }
 
 footer div#Socials  img {
@@ -264,6 +312,7 @@ section#Testimonials {
 
     padding: 0 10px;
     margin: 0 0 20px;
+    text-shadow: none;
 
     width: 100%;
 
