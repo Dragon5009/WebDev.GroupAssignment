@@ -354,9 +354,7 @@ section#GettingHere div#IndexMap p {
 
 /* ------------------ WHAT HAPPENS HERE SPECIFIC by M Croft ------------------ */
 /* Roller Prime Section by M Croft */
-section#RollerPrime img {
-    width: 350px;
-    height: auto;
+section#RollerPrime video {
     margin: auto;
 }
 
